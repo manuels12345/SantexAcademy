@@ -1,0 +1,318 @@
+
+html{
+    font-family: 'Inter', sans-serif;
+    /* tamaño del padre */
+    /* todo lo demas va a tomar ese numero base de medida */
+    font-size: 16px;
+}
+
+/* Prueba de medidas relativas tomando en cuenta*/
+/* los 16 px de tamaño del padre utilizando em*/ 
+/*para las medidas del resto de componentes*/
+/*  1 em = 16 px */
+/* 0.5 em = 8 px o 2 em = 32px */
+body{
+
+    /* Sacarle el margen al body por default tiene 8px */
+    margin: 0em;
+
+}
+
+main{
+
+    margin: 0em;
+    display: block;
+    /* poner borde en la parte de abajo de la caja */
+    /* Agregearle espacio interno del contenido con la caja */
+
+    height: 25em;
+    
+
+}
+
+
+
+
+.texto{
+
+    
+    margin-top: 4em;
+    text-align: center;
+    padding-left: 17em;
+    padding-right: 17em;
+   
+
+}
+
+.textoB2{
+
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30em;
+
+
+    
+}
+
+.textoB2 h1{
+
+    text-align: left;
+    width: 20%;
+}
+
+.textoB2 p{
+
+    text-align: start;
+    width: 25%;
+    
+}
+
+
+
+.banner2{
+    width: 100%;
+    padding-top: 7.5em;
+    margin-top: 7em;
+    padding-right: 1.80em;
+    padding-bottom: 6.25em;
+    margin-bottom: 0em;
+    padding-left:  1.80em;
+    justify-content: center;
+    color: white;
+    background-color: #201b24;
+    
+}
+
+.banner3{
+    background-image: url("https://technologywithpurpose.org/wp-content/uploads/2022/11/twp-home.jpg"); 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    border-width: 0px; 
+    border-color: var(--awb-color3); 
+    border-style: solid; 
+    background-size: cover; 
+    background-attachment: fixed; 
+    height: calc(100vh - 80px);
+
+}
+.but{
+
+    margin-top: 3em;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.bH3{
+
+    height: 2.5em;
+    width: auto;
+    border-radius: 1.2em;
+    color: rgb(96, 49, 224);
+    border-color: rgb(96, 49, 224);
+}
+
+.bH2{
+
+    border-radius: 1.2em;
+    height: 2.5em;
+    margin-right: 2em;
+    width: auto;
+
+}
+
+p{
+    /* magin relativo */
+    margin-right: 2em;
+}
+
+/* Nav */
+
+.nav{
+    /* Expecificar como debe mostrar los elementos de la caja */
+    display: flex;
+    /* poner borde en la parte de abajo de la caja */
+    border-bottom: solid 0.1em gray;
+    /* Agregearle espacio interno del contenido con la caja */
+    justify-content: space-between;
+}
+
+.navL{
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
+
+    width: 30%;
+
+}
+
+.navR{
+    display: flex;
+    align-items: center;
+}
+
+.navR p{
+    align-items: center;
+}
+
+
+
+#nav-img{
+
+    width: 8.8em;
+    height: 2.5em;
+}
+/* Buttons */
+button{
+    /* Alinear los items dentro de la caja al centro */
+    align-items: center;
+    /* agrandar el alto del item */
+    width: 7.5em;
+    height: 2.2em;
+    margin-left: 1,1em;
+    border-radius: 1.1em;
+    padding: 0 1.2em;
+    background-color: white;
+    font-size: 1em;
+}
+
+
+/*  Media quary  */ 
+/* se utiliza para acomodar los tamaños en pantalla */
+/* osea se pone una condicion para q si se agranda */
+/* o achica la pagina la vas a ver igual */
+
+@media ( width >= 2500px ) {
+    html{
+
+        font-size: 20px;
+
+    }
+}
+
+
+@media ( width >= 3200px ) {
+    html{
+
+        font-size: 24px;
+
+    }
+}
+
+@media ( width <= 1200px ) {
+    html{
+
+        
+        font-size: 9px;
+
+    }
+
+    #nav-img{
+
+        width: 16em;
+        height: 7em;
+        margin-right: 5em;
+    }
+
+    .nav p{
+
+        font-size: 1.7em;
+
+    }
+
+    button{
+        /* Alinear los items dentro de la caja al centro */
+        align-items: center;
+        /* agrandar el alto del item */
+        width:7.5em;
+        height: 2.5em;
+        font-size: 1.7em;
+        margin-left: 1,1em;
+        border-radius: 1.5em;
+        padding: 0 1.2em;
+        background-color: white;
+        
+    }
+
+}
+
+
+@media ( width < 800px ) {
+    html{
+
+        font-size: 7px;
+
+    }
+
+    #nav-img{
+
+        width: 16em;
+        height: 7em;
+        margin-right: 5em;
+    }
+
+    .nav p{
+
+        font-size: 1.7em;
+
+    }
+
+    button{
+        /* Alinear los items dentro de la caja al centro */
+        align-items: center;
+        /* agrandar el alto del item */
+        width:7.5em;
+        height: 2.5em;
+        font-size: 1.7em;
+        margin-left: 1,1em;
+        border-radius: 1.5em;
+        padding: 0 1.2em;
+        background-color: white;
+        
+    }
+
+}
+
+#form{
+
+    display: flex;
+    justify-content: center;
+
+
+}
+
+#input{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+
+
+#text1{
+    width: 30%;
+}
+#text2{
+    width: 30%;
+}
+#sel{
+    width: 30%;
+}
+
+/* Divs */
+
+.c1{
+
+    width: 20%;
+}
+
+.c2{
+
+    width: 30%;
+
+}
+
